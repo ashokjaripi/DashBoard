@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--boostrap CSS File-->
+    <link rel="stylesheet" href="MDB-Free_4.19.2\css\fontawesome-free-5.15.3-web\css\all.css">
+    <link rel="stylesheet" href="MDB-Free_4.19.2\css\fontawesome-free-5.15.3-web">
+    <link rel="stylesheet" href="MDB-Free_4.19.2\css\bootstrap.css">
+    <link rel="stylesheet" href="MDB-Free_4.19.2\css\mdb.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dash Board</title>
+</head>
+<body>
+    <!--Main Navbar file-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+         <div class="container">
+             <a href="index.html" class="navbar-brand">
+                 <i class="fa fa-snowflake fa-2x text-warning"></i>
+                 <span style="color: cadetblue;">Uibrains</span>
+             </a>
+             <button class="navbar-toggler" data-toggle="collapse" data-target="#Ui-navbar">
+                 <i class="navbar-toggler-icon"></i>
+             </button>
+             <div class="collapse navbar-collapse mt-4" id="Ui-navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class=""><i class="fa fa-chart-bar  text-muted"></i> DashBoard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Tasks.html" class="nav-link "><i class="fa fa-list  text-muted"></i> Tasks</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a href="Categories.html" class="nav-link"><i class="fa fa-sitemap  text-muted"></i> Categories</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a href="Employees.html" class="nav-link"><i class="fa fa-users  text-muted"></i> Employees</a> 
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">
+                                <i class="fa fa-sign-in-alt text-muted"></i>
+                                Ashok
+                            </a>
+                            <div class="dropdown-menu p-2">
+                                <a href="Profiles.html" class="dropdown-item"> <i class="fa fa-user-circle text-muted"></i> Profile</a>
+                                 <a href="Settings.html" class="dropdown-item"> <i class="fa fa-cogs text-muted"></i> Settings</a>
+                            </div>
+                        </li>
+                        <li  class="nav-item">
+                            <a href="Login.html" class="nav-link">
+                                <i class="fa fa-sign-out-alt text-muted"></i>
+                                LogOut
+                            </a>
+                        </li>
+                    </ul>
+             </div>
+         </div>
+    </nav>
+    <!--------------DashBoard Section--------------->
+    <section class="p-3 bg-teal text-white">
+          <div class="container">
+              <div class="row">
+                  <h1><i class="fa fa-chart-bar"></i> DashBoard</h1>
+              </div>
+          </div>
+    </section>
+    <!------------Buttons Section------------------>
+    <section class="p-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" data-toggle="modal" data-target="#modal-Task">
+                    <button class="btn btn-primary btn-sm btn-block"><i class="fa fa-plus-circle"></i> ADD Tasks</button>
+                </div>
+                <div class="col-md-4" data-toggle="modal" data-target="#modal-category">
+                    <button class="btn btn-success btn-sm btn-block"><i class="fa fa-plus-circle"></i> ADD Categories</button>
+                </div>
+                <div class="col-md-4" data-toggle="modal" data-target="#modal-Employee">
+                    <button class="btn btn-warning btn-sm btn-block"><i class="fa fa-plus-circle"></i> ADD EMPLOYEE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Task Modal-->
+    <div class="modal" id="modal-Task" >
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content animated zoomIn">
+                <div class="modal-header bg-primary text-white">
+                   <h3>ADD TASK</h3>
+                   <button class="close bg-danger" data-dismiss="modal">
+                       <i class="fa fa-times"></i>
+                   </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="" class="form-check-label">Title</label>
+                            <input type="text" class="form-control" placeholder="title">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check-label">Category</label>
+                            <select name="" id="" class="form-control">
+                              <optgroup label="select">
+                                   <option value="">d</option>
+                                   <option value="">c</option>
+                                   <option value="">e</option>
+                              </optgroup>    
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check-label">Upload file</label>
+                            <input type="file" class="form-control-file" placeholder="">
+                            <small>Max size 300kb</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-check-label">Description</label>
+                            <textarea name="editor1" id="editor" cols="30" rows="4" class="form-control" placeholder="Description" ></textarea>
+                        </div>
+                        <div class="text-center">
+                            <input type="submit" class="btn  btn-primary btn-sm" value="ADD TASK">
+                            <a href="#" data-dismiss="modal" class="btn btn-dark btn-sm">CLOSE</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------Category Modal----------->
+    <div class="modal" id="modal-category">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content animated flipInX">
+                <div class="modal-header bg-success">
+                      <h3>ADD CATEGORY</h3>  
+                      <button class="close bg-danger" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form class="p-3">
+                        <input type="text" class="form-control" placeholder="Company">
+                        <input type="date" class="form-control">
+                        <input type="submit" class="btn btn-success btn-sm" value="ADD CATEGORY">
+                        <a href="#" class="btn btn-dark btn-sm" data-dismiss="modal">CLOSE</a>
+                    </form>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------Emplooyee Modal----------->
+    <div class="modal" id="modal-Employee">
+         <div class="modal-dialog modal-md">
+             <div class="modal-contant bg-warning animated flipInY">
+                 <div class="modal-header">
+                     <h3>ADD EMPLOYEE</h3>
+                     <button class="close bg-danger" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                 </div>
+                 <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                             <input type="text" class="form-control" placeholder="EMPLOYEE NAME">
+                        </div>
+                        <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Employee Email">
+                        </div>
+                        <div class="form-group">
+                             <input type="password" class="form-control" placeholder="default password">
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="submit" class="btn btn-warning btn-sm" value="ADD EMPLOYEE">
+                            <a href="#" class="btn btn-dark btn-sm" data-dismiss="modal" >CLOSE</a>
+                        </div>
+                    </form>
+                 </div>
+             </div>
+         </div>
+    </div>
+    <!--------------Main Content Section--------------------->
+    <section class="p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header bg-secondary">
+                             <h4>Current Tasks</h4>
+                        </div>
+                        <div class="card-body bg-light">
+                            <table class="table table-hover text-center">
+                                <thead class="bg-dark text-white">
+                                    <tr>
+                                        <th>S.NO</th>
+                                        <th>NAME</th>
+                                        <th>EMAIL</th>
+                                        <th>TASK</th>
+                                        <th>LEVEL</th>
+                                        <th>CATEGORY</th>
+                                        <th>DETAILS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>John</td>
+                                        <td>john@gmail.com</td>
+                                        <td>Automation of EMAIL</td>
+                                        <td>Medium</td>
+                                        <td>Development</td>
+                                        <td>
+                                            <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>John</td>
+                                        <td>john@gmail.com</td>
+                                        <td>Automation of EMAIL</td>
+                                        <td>Medium</td>
+                                        <td>Development</td>
+                                        <td>
+                                            <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>John</td>
+                                        <td>john@gmail.com</td>
+                                        <td>Automation of EMAIL</td>
+                                        <td>Medium</td>
+                                        <td>Development</td>
+                                        <td>
+                                            <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>John</td>
+                                        <td>john@gmail.com</td>
+                                        <td>Automation of EMAIL</td>
+                                        <td>Medium</td>
+                                        <td>Development</td>
+                                        <td>
+                                            <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>John</td>
+                                        <td>john@gmail.com</td>
+                                        <td>Automation of EMAIL</td>
+                                        <td>Medium</td>
+                                        <td>Development</td>
+                                        <td>
+                                            <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>John</td>
+                                        <td>john@gmail.com</td>
+                                        <td>Automation of EMAIL</td>
+                                        <td>Medium</td>
+                                        <td>Development</td>
+                                        <td>
+                                            <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>John</td>
+                                        <td>john@gmail.com</td>
+                                        <td>Automation of EMAIL</td>
+                                        <td>Medium</td>
+                                        <td>Development</td>
+                                        <td>
+                                            <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>John</td>
+                                        <td>john@gmail.com</td>
+                                        <td>Automation of EMAIL</td>
+                                        <td>Medium</td>
+                                        <td>Development</td>
+                                        <td>
+                                            <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>John</td>
+                                        <td>john@gmail.com</td>
+                                        <td>Automation of EMAIL</td>
+                                        <td>Medium</td>
+                                        <td>Development</td>
+                                        <td>
+                                            <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                     <div class="card mb-5">
+                         <div class="card-header bg-primary">
+                            <div class="row text-white  align-items-center">
+                                <div class="col-md-6 ">
+                                    <i class="fa fa-list fa-4x"></i> 
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <h1 class="display-3">08</h1>
+                                    <p>Tasks</p>
+                                </div>
+                            </div>
+                            </div>
+                         <div class="card-footer text-center">
+                             <h6><a href="Tasks.html" class="text-primary">View Details <i class="fa fa-arrow-circle-right"></i></a></h6>
+                        </div>
+                     </div>
+                     <div class="card my-5">
+                        <div class="card-header bg-success">
+                           <div class="row text-white  align-items-center">
+                               <div class="col-md-6 ">
+                                   <i class="fa fa-sitemap fa-4x"></i> 
+                               </div>
+                               <div class="col-md-6 text-center">
+                                   <h1 class="display-3">06</h1>
+                                   <p>Categories</p>
+                               </div>
+                           </div>
+                           </div>
+                        <div class="card-footer text-center">
+                            <h6><a href="Categories.html" class="text-success">View Details <i class="fa fa-arrow-circle-right"></i></a></h6>
+                       </div>
+                    </div>
+                    <div class="card my-5">
+                        <div class="card-header bg-secondary">
+                           <div class="row text-white  align-items-center">
+                               <div class="col-md-6 ">
+                                   <i class="fa fa-users fa-4x"></i> 
+                               </div>
+                               <div class="col-md-6 text-center">
+                                   <h1 class="display-3">09</h1>
+                                   <p>Employees</p>
+                               </div>
+                           </div>
+                           </div>
+                        <div class="card-footer text-center">
+                            <h6><a href="Employees.html" class="text-secondary">View Details <i class="fa fa-arrow-circle-right"></i></a></h6>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--footerSection-->
+    <footer class="container-fluid bg-dark text-white text-center">
+          <div class="row p-2">
+              <div class="col">
+                  <p>CopyRight &copy; 2021, Uibrains </p>
+                  <p>All Rights Reserved</p>
+                  <p>Developed & Maintained by
+                      <a href="#"  class="btn-secondary m-0 p-0" target="_blank" style="color:chartreuse" ><i class="fa fa-user-circle"></i>  Ashok Kumar </a></p>
+              </div>
+          </div>
+    </footer>
+    <!-----------End File-----------
+    <div style="margin-bottom: 300px;"></div> -->
+    <!--bootstrap JS files-->
+    <script src="MDB-Free_4.19.2\js\jquery.js"></script>
+    <script src="MDB-Free_4.19.2\js\popper.js"></script>
+    <script src="MDB-Free_4.19.2\js\bootstrap.js"></script>
+    <script src="MDB-Free_4.19.2\js\mdb.js"></script>
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'editor1' );
+    </script>
+</body>
+</html>

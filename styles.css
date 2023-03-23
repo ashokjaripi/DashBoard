@@ -1,0 +1,25 @@
+.dropdown-item:hover{
+    background: linear-gradient(45deg,black,deeppink);
+    color: white ! important ;
+    box-shadow: 0 0 10px black;
+    padding: 10px;
+}
+.bg-teal , .btn-teal{
+    background-color: teal;
+}
+.text-teal{
+    color: teal;
+}
+.btn-primary , .bg-primary{
+    background: linear-gradient(45deg,darkslategrey,cornflowerblue);
+}
+.btn-success , .bg-success{
+    background: linear-gradient(65deg,darkslategrey,limegreen);
+}
+.btn-warning , .bg-warning{
+    background: linear-gradient(45deg,darkslategrey, darkgoldenrod);
+}
+.bg-secondary , .btn-secondary{
+    background: linear-gradient(45deg,darkslategrey,  darkmagenta);
+    color: cornsilk;
+}

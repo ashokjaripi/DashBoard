@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--boostrap CSS File-->
+    <link rel="stylesheet" href="MDB-Free_4.19.2\css\fontawesome-free-5.15.3-web\css\all.css">
+    <link rel="stylesheet" href="MDB-Free_4.19.2\css\fontawesome-free-5.15.3-web">
+    <link rel="stylesheet" href="MDB-Free_4.19.2\css\bootstrap.css">
+    <link rel="stylesheet" href="MDB-Free_4.19.2\css\mdb.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dash Board</title>
+</head>
+<body>
+    <!--Main Navbar file-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+         <div class="container">
+             <a href="index.html" class="navbar-brand">
+                 <i class="fa fa-snowflake fa-2x text-warning"></i>
+                 <span style="color: cadetblue;">Uibrains</span>
+             </a>
+             <button class="navbar-toggler" data-toggle="collapse" data-target="#Ui-navbar">
+                 <i class="navbar-toggler-icon"></i>
+             </button>
+             <div class="collapse navbar-collapse mt-4" id="Ui-navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class=""><i class="fa fa-chart-bar  text-muted"></i> DashBoard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Tasks.html" class="nav-link "><i class="fa fa-list  text-muted"></i> Tasks</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a href="Categories.html" class="nav-link"><i class="fa fa-sitemap  text-muted"></i> Categories</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a href="Employees.html" class="nav-link"><i class="fa fa-users  text-muted"></i> Employees</a> 
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">
+                                <i class="fa fa-sign-in-alt text-muted"></i>
+                                Ashok
+                            </a>
+                            <div class="dropdown-menu p-2">
+                                <a href="Profiles.html" class="dropdown-item"> <i class="fa fa-user-circle text-muted"></i> Profile</a>
+                                 <a href="Settings.html" class="dropdown-item"> <i class="fa fa-cogs text-muted"></i> Settings</a>
+                            </div>
+                        </li>
+                        <li  class="nav-item">
+                            <a href="Login.html" class="nav-link">
+                                <i class="fa fa-sign-out-alt text-muted"></i>
+                                LogOut
+                            </a>
+                        </li>
+                    </ul>
+             </div>
+         </div>
+    </nav>
+    <!--------------DashBoard Section--------------->
+    <section class="p-3 bg-teal text-white">
+          <div class="container">
+              <div class="row">
+                  <h1><i class="fa fa-user-circle"></i> Profile</h1>
+              </div>
+          </div>
+    </section>
+    <!------------buttons section--------------->
+    <section class="bg-light p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                     <a href="index.html" class="btn btn-warning btn-block"><i class="fa fa-arrow-alt-circle-right"></i> DashBoard</a>
+                </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3" data-toggle="modal" data-target="#password-modal">
+                    <a href="#" class="btn btn-secondary btn-block"><i class="fa fa-arrow-alt-circle-right"></i> Update Password</a>
+                </div>
+                <div class="col-md-3" data-toggle="modal" data-target="#delete-modal">
+                    <a href="#" class="btn btn-danger btn-block"><i class="fa fa-arrow-alt-circle-right"></i> Delete Account</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------Update Password Model----------------->
+    <div class="modal" id="password-modal">
+      <div class="modal-dialog modal-md">
+          <div class="modal-content animated jackInTheBox">
+              <div class="modal-header bg-primary">
+                  <h3 class="text-secondary">Update Password</h3>
+                  <button class="close bg-danger" data-dismiss="modal"><i class="fa fa-times"></i></button>
+              </div>
+              <div class="modal-body">
+                  <form action>
+                      <div class="form-group">
+                          <input type="email" class="form-control" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                              <input type="password" class="form-control" placeholder="old-password">
+                      </div>       
+                      <div class="form-group">
+                          <input type="password" class="form-control" placeholder="new-password">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" placeholder="conform-new-password">
+                     </div>
+                     <div class="text-center">
+                     <input type="submit" class="btn btn-success btn-md" value="Update Password">
+                     <a href="#" class="btn btn-dark btn-md" data-dismiss="modal">close</a>
+                    </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!--------------Delete Account modal----------------->
+    <div class="modal" id="delete-modal">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content animated flipInX">
+                <div class="modal-header bg-danger">
+                    <h3>Delete Account</h3>
+                    <button class="close bg-danger" data-dismiss="modal"><i class="fa fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="text-center">
+                                <input type="submit" class="btn btn-primary btn-md" value="Delete">
+                                <a href="#" class="btn btn-dark btn-md" data-dismiss="modal">close</a>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------User Details ------------------->
+    <section class="p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="card">
+                        <div class="card-header bg-teal">
+                            <h3> About Us </h3>
+                        </div>
+                        <div class="card-body bg-light">
+                            <div class="card ">
+                                <div class="card-body">
+                                    <h3>ASHOK KUMAR</h3>
+                                </div>
+                            </div>
+                            <div class="card mt-2">
+                                <div class="card-body">
+                                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos non quidem ut blanditiis officia laudantium architecto in reiciendis atque nihil aut cumque amet aliquam, inventore asperiores repellat a itaque qui!</p>
+                                </div>
+                            </div>
+                            <div class="card mt-2">
+                                <div class="card-body">
+                                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos non quidem ut blanditiis officia laudantium architecto in reiciendis atque nihil aut cumque amet aliquam, inventore asperiores repellat a itaque qui!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-center bg-secondary">
+                            <h4> Thank You !</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header bg-warning text-center">
+                            <h3 class="text-white"> User 1 </h3>
+                        </div>
+                        <div class="card-body p-0">
+                            <img src="MDB-Free_4.19.2\img\overlays\img_20.jpeg" alt="#" class="img img-thumbnail">
+                            <button class="btn btn-warning btn-md btn-block my-5"><i class="fa fa-pen-alt"></i> Edit image</button>
+                            <button class="btn btn-danger btn-md btn-block my-5"><i class="fa fa-trash"></i> Delete image</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--footerSection-->
+    <footer class="container-fluid bg-dark text-white text-center">
+          <div class="row p-2">
+              <div class="col">
+                  <p>CopyRight &copy; 2021, Uibrains </p>
+                  <p>All Rights Reserved</p>
+                  <p>Developed & Maintained by
+                      <a href="#"  class="btn-secondary m-0 p-0" target="_blank" style="color:chartreuse" ><i class="fa fa-user-circle"></i>  Ashok Kumar </a></p>
+              </div>
+          </div>
+    </footer>
+    <!-----------End File-----------
+    <div style="margin-bottom: 300px;"></div> -->
+    <!--bootstrap JS files-->
+    <script src="MDB-Free_4.19.2\js\jquery.js"></script>
+    <script src="MDB-Free_4.19.2\js\popper.js"></script>
+    <script src="MDB-Free_4.19.2\js\bootstrap.js"></script>
+    <script src="MDB-Free_4.19.2\js\mdb.js"></script>
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'editor1' );
+    </script>
+</body>
+</html>
